@@ -1,10 +1,10 @@
 package com.telly.controllers;
 
 import java.security.Principal;
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 import java.util.List;
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,29 +15,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.telly.dao.FormValidationGroup;
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 import com.telly.dao.Reserve;
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 import com.telly.dao.User;
 import com.telly.service.ReserveService;
 import com.telly.service.UserService;
 
 
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
 
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 @Controller
 public class UserController {
 
 	@Autowired
 	UserService userService;
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
+//=======
 	
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 	@Autowired
 	ReserveService reserveService;
 
@@ -45,16 +45,16 @@ public class UserController {
 	public String showLogin() {
 		return "login";
 	}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-=======
+//=======
 	
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 	@RequestMapping("/loggedout")
 	public String showLogout() {
 		return "loggedout";
 	}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 	@RequestMapping("/createaccount")
 	public String createAccount(Model model, Principal principal) {
@@ -75,16 +75,11 @@ public class UserController {
 		user.setEnabled(true);
 
 		userService.create(user);
-=======
-	
-	
-	@RequestMapping("/createaccount")
-	public String createAccount(Model model, Principal principal) {
-		
-		model.addAttribute("user", new User());
-		
-		return "createaccount";
+
+		return "home";
+
 	}
+//=======
 
 
 
@@ -116,7 +111,7 @@ public class UserController {
 		model.addAttribute("reserves", reserves);
 		System.out.println(reserves);
 
->>>>>>> origin/dev2
+//>>>>>>> origin/dev2
 
 		return "home";
 
